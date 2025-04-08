@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Beamer template based on https://www.overleaf.com/latex/templates/hkust-beamer-template/wsjnrdpyhmfn (GZ)                   %
+% Original was based on THU beamer theme
+% Original Author: Yuxuan HU
+% Edited for UNCC: Nick Kakavitsas
+% Date: Apr 2025
+% LPPL Licensed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[10pt, aspectratio=169]{beamer}
+% \documentclass[lmss, aspectratio=169]{beamer}
+% \documentclass[serif, aspectratio=169]{beamer}
+\documentclass[qtm, aspectratio=169]{beamer}
+% \documentclass[ptm, aspectratio=169]{beamer}
+% \documentclass[serif]{beamer}  % for 4:3 ratio
+\usepackage[T1]{fontenc} 
+% \usepackage{fourier} % see "http://faq.ktug.org/wiki/uploads/MathFonts.pdf" for other options
+\usepackage{latexsym,amsmath,multicol,booktabs,calligra,lipsum,pgfgantt,bm,subcaption,xspace,amsfonts,ulem,cancel,graphicx,mdframed,animate,sidecap,multirow,algorithm, algorithmic,array,float,nomencl,url,amssymb,longtable,changepage,blindtext,capt-of,hyperref,appendixnumberbeamer}
+% \usepackage{algpseudocode}
+\usepackage[export]{adjustbox}
+\usepackage[table,xcdraw]{xcolor}
+% \usepackage{graphicx,pstricks,listings,stackengine}
+% \usepackage{enumitem}
+\sidecaptionvpos{figure}{c}
+
+% You might need to adjust the spacing of this section either with making the names smaller, the spacing in the sty file different, or moving the images around on the first frame below
+\author{Your Name}
+\title{Main Title}
+\subtitle{Subtitle}
+\institute{
+   \textbf{Chair: Dr.Name Name} \\ \; \\
+   Committee: \\
+   Dr. Name Name\\
+   Dr. Name Name \\ 
+   Dr. Name Name
+}
+\date{\small{April 4, 2025}}
+\usepackage{style}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+% set colors
+\definecolor{unccGold}{RGB}{164, 150, 101}
+\definecolor{unccGreen}{RGB}{0, 80, 53}
+\definecolor{unccClayRed}{RGB}{128, 47, 45}
+\definecolor{blue}{RGB}{4, 118, 208}
+\definecolor{aiaaBlue}{RGB}{26, 61, 109}
+\colorlet{unccGoldOpaque}{unccGold!50}
+\colorlet{unccclayRedOpaque}{unccClayRed!50}
+
+% Commands for colors - some of these are the same
+\newcommand{\emphPt}[1]{{\color{unccClayRed}\textbf{#1}}}
+\newcommand{\emphPtGold}[1]{{\color{unccGold}\textbf{#1}}}
+\newcommand{\futureWork}[1]{{\color{blue}\textbf{#1}}}
+\newcommand{\greenText}[1]{{\color{unccGreen}\textbf{#1}}}
+\newcommand{\emphPtt}[1]{{\color{unccClayRed}{#1}}}
+\newcommand{\emphPtGoldd}[1]{{\color{unccGold}{#1}}}
+\newcommand{\futureWorkk}[1]{{\color{blue}{#1}}}
+\newcommand{\greenTextt}[1]{{\color{unccGreen}{#1}}}
+\newcommand{\expVal}[1]{\mathbb{E}\left[#1\right]}
+\newcommand{\parD}[2]{\frac{\partial#1}{\partial#2}}
+\DeclareMathOperator{\atantwo}{atan2}
+\DeclareMathOperator{\atan}{atan}
+\DeclareMathOperator{\asin}{asin}
+% \newcommand{\skills}[2]{{#1}\hfill\location{#2}\fakeNewLine}
+
+% \lstset{
+%     basicstyle=\ttfamily\small,
+%     keywordstyle=\bfseries\color{deepblue},
+%     emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+%     stringstyle=\color{deepgreen},
+%     numbers=left,
+%     numberstyle=\small\color{halfgray},
+%     rulesepcolor=\color{red!20!green!20!blue!20},
+%     frame=shadowbox,
+% }
+
+%- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+\begin{document}
+
+% These frames are your slides
+\begin{frame}
+    \titlepage
+    \vspace*{-0.9cm}
+    \begin{columns}[T,onlytextwidth]
+        \column{0.475\textwidth}
+            \begin{figure}
+                \vspace*{-1cm} % ADJUST THIS SO YOUR IMAGE APPEARS WHERE YOU WANT
+                \centering
+                \includegraphics[width=0.5\linewidth]{example-image-a} % USE YOUR LAB'S LOGO
+            \end{figure}
+        
+        \column{0.10\textwidth}
+        \column{0.475\textwidth}
+            \begin{figure}
+                \vspace*{-3cm} % ADJUST THIS SO YOUR IMAGE APPEARS WHERE YOU WANT
+                \centering
+                \includegraphics[width=\linewidth]{figs/uncc/unccLogo.eps}
+            \end{figure}
+        \column{0.25\textwidth}
+        
+    \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outline slide format
+
+% \begin{frame}    
+% \tableofcontents[sectionstyle=show,
+% subsectionstyle=show/shaded/hide,
+% subsubsectionstyle=show/shaded/hide]
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Introduction
+% --- --- --- --- --- --- --- --- --- --- --- 
+\include{sections/exIntro}
+
+% Example slides
+% --- --- --- --- --- --- --- --- --- --- --- 
+\include{sections/exTableSlide}
+\include{sections/exAnimationSlide}
+
+% Chapter 3: ADD YOUR CH3 NAME HERE
+% --- --- --- --- --- --- --- --- --- --- --- 
+% \include{sections/ch3Section}
+
+% Chapter 4: ADD YOUR CH4 NAME HERE
+% --- --- --- --- --- --- --- --- --- --- --- 
+% \include{sections/ch4Section}
+
+% Chapter 5: ADD YOUR CH5 NAME HERE
+% --- --- --- --- --- --- --- --- --- --- --- 
+% \include{sections/ch5Section}
+
+% etc chapters as needed
+
+
+% Chapter N: Conclusion 
+% --- --- --- --- --- --- --- --- --- --- --- 
+% \include{sections/conclusions}
+
+% --- References ---
+\setbeamertemplate{frametitle continuation}{}
+\begin{frame}[allowframebreaks,noframenumbering]{References}
+    \bibliography{refs}
+    \bibliographystyle{apalike}
+\end{frame}
+
+% Appendix/backup slides
+% --- --- --- --- --- --- --- --- --- --- --- 
+\include{sections/exAppdx}
+
+\end{document}
